@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+
+}
+
+.logo {
+    opacity: 0.9
+
+}
+
+
+
+.fold {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  float: left;
+  text-justify: auto;
+    
+
+} 
+
+.process {
+  position: relative;
+  right: 80px;
+  bottom: -50px;
+  text-justify: auto;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  float: right;
+  text-justify: auto;
+}
+
+.angelcta {
+  position: absolute;
+  bottom: -350px;
+  width: 100%;
+  
+  
+  
+}
+
+
+#angelpart {
+  background-color: rgb(74, 99, 211);
+  padding: 45px
+}
+
+#buttonpart {
+  padding-bottom: 30px;
+  padding-top: 60px;
+  bottom: 800px;
+  top: 520px;
+  
+
+}
+
+
+
+
+.proc {
+  position: relative;
+  float: right;
+  right: 1px;
+  top: -380px;
+  overflow-y: auto;
+
+}
+
+
+.button {
+  left: 60%;
+  position: absolute;
+  top: 790px;
+
+
+}
+/* this looped back because I couldn't make it go up using bottom skill issue for now */
+
+
+/* fix this part, make text smaller, position center a bit */
+
+.header-right {
+  overflow: auto;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 0px;
+  z-index: 2;
+
+}
+  
+
+.header-right a {
+  float: left;
+  padding: 5px;
+  color: rgb(236, 236, 238);
+  text-decoration: none;
+  font-size: 17px;
+  width: 10%
+
+}
+
+.community {
+  position: relative; right: 400px;
+  width: 100%;
+  
+
+}
+
+.navbar {
+    background: #131313;
+    height: 80px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
