@@ -221,7 +221,22 @@ p {
 
 .learnbtn {
     position: relative;
-    left: 650px;
+  
+  left: 630px;
+  background-color: #65686d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.learnbtn {
+  border: 0;
+  border: none;
 
 }
 

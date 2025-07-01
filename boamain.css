@@ -1,6 +1,5 @@
 * {
-  padding: 0;
-  margin: 0;
+
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -16,28 +15,116 @@ body {
 }
 
 
+.elevate {
+    width: 100%; height: 500px;
+    background-image: url(foldimage1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: -50px;
 
-.fold {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-  float: left;
-  text-justify: auto;
+
+}
+
+.elevate > h1 {
+    position: absolute; left: 100px; top: 250px; width: 100%; height: 500px;
+    text-box: blue;
+    background-image: linear-gradient(to right),
+    gray 40%
+    rgb(209, 59, 59) 70%
+    rgba(0,0,0,0) 100%;
     
+
+}
+
+
+
+h1 {
+    display: inline-block;
+    border: 1px; border-color: blue;
+
+}
+
+
+
+
+
+#elev8 {
+  margin-left: 20px;
+  width: 50%;
+  
 
 } 
 
-.process {
+#foldimg {
   position: relative;
-  right: 80px;
-  bottom: -50px;
-  text-justify: auto;
-  margin: auto;
+  top: -315px;
+
+}
+
+#proseso {
+  position: relative; left: 250px;
+  top: -50px;
+  max-width: 900px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: larger;
+
+}
+
+#skillz {
+  position: relative; left: 10px;
   width: 50%;
   padding: 10px;
-  float: right;
   text-justify: auto;
+  font-size: larger;
+
+
 }
+
+#prosimg {
+  position: relative;
+  top: -330px;
+
+}
+
+
+.findangel {
+  position: relative;
+  float: center;
+  align-items: center;
+  background-color: rgb(56, 56, 138);
+  background-size: 20%;
+  padding-top: 30px;
+  padding-right: 200px;
+  width: 200%;
+}
+
+.findangel > button {
+  position: relative;
+  float: center;
+  left: 630px;
+  background-color: #65686d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.findangel > h2 {
+  left: 800px;
+  right: 500px;
+  float: center;
+  text-align: center;
+
+
+}
+
+
 
 .angelcta {
   position: absolute;
@@ -50,7 +137,7 @@ body {
 
 
 #angelpart {
-  background-color: rgb(74, 99, 211);
+  background-color: rgb(35, 54, 141);
   padding: 45px
 }
 
@@ -80,6 +167,12 @@ body {
   left: 60%;
   position: absolute;
   top: 790px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 
 }
@@ -90,7 +183,7 @@ body {
 
 .header-right {
   overflow: auto;
-  background-color: #333;
+  background-color: #757070;
   position: fixed;
   top: 0;
   width: 100%;
@@ -124,27 +217,20 @@ body {
 
 }
 
-.navbar {
-    background: #131313;
-    height: 80px
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
 
-}
-
-.navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
+html, body
+{
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+
+
 }
+
+
+
+
 

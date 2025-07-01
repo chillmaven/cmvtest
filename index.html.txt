@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Ocean Virtual Assistants</title>
+    <link rel="stylesheet" href="boamain.css" />
+ <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <div class="header-right">
+        <a href="#default" class="logo">
+        <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
+        </a>
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#contact">Pricing</a>
+        <a href="#contact">FAQs</a>
+     </div>
+
+
+
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section class="elevate">
+<h1>Elevate Your Business with High-Quality Virtual Talent</h1>
+
+
+
+</section>
+
+
+
+
+<div id="proseso">
+<h2>How Our Process Works</h2>
+<p>We source talented professionals from overseas and invest in comprehensive training to align with your unique business needs. Your dedicated Angel will learn your specific workflows and preferences, giving you complete control over how tasks are executed—ensuring consistency and quality.</p>
+
+
+</div>
+
+<div id="skillz">
+<h2>Skilled Angels</h2>
+<p>Our Angels possess excellent English communication skills—fluent in reading, writing, and speaking—facilitating clear, seamless interactions. To maximize efficiency, we recommend assigning up to five core tasks per Angel, allowing them to focus and deliver exceptional results.</p>
+
+</div>
+
+<div id="systema">
+</div>
+<i class="fa-regular fa-chart-diagram"></i>
+
+</div>
+
+<div id="prosimg">
+<p><img src="processimage1.jpg" alt="team" style="float:right;width:600px;height:300px;"></p>
+</div>
+
+<section class="findangel">
+  <h2>Ready To Take Your Business To The Next Level?</h2>
+  <button><center>Find My Angel</center></button>
+  <br>
+  
+
+</section>

@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    opacity: 0.9
+
+}
+
+
+.header-right {
+  overflow: auto;
+  background-color: #757070;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 0px;
+  z-index: 2;
+
+}
+
+.header-right a {
+  float: left;
+  padding: 5px;
+  color: rgb(236, 236, 238);
+  text-decoration: none;
+  font-size: 17px;
+  width: 10%
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#abtpara {
+    text-align: justify;
+    width: 50%;
+
+
+}
+
+#excel {
+    position: relative; right: 300px;
+    text-align: center;
+    width: 50%;
+    float: right;
+    
+    
+}
+
+#learn {
+    position: relative;
+    bottom: -160px;
+    left: 650px;
+
+
+}
+
+#learn {
+    background-color: #131c99; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+
+
+}
+
