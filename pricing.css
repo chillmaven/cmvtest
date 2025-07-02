@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+    opacity: 0.9
+
+}
+
+
+.header-right {
+  overflow: auto;
+  background-color: #757070;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 12px;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+  margin-left: 0px;
+  z-index: 2;
+
+}
+
+.header-right a {
+  float: left;
+  padding: 5px;
+  color: rgb(236, 236, 238);
+  text-decoration: none;
+  font-size: 17px;
+  width: 10%
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.talk {
+  width: 100%; height: 700px;
+    background-image: url(pricingfold.jpg);
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -89px;
+
+
+}
+
+.talk > h1 {
+    position: absolute; left: 200px; top: 250px; width: 100%; height: 500px;
+    font-size: 3rem;
+
+
+}
+
+.talk > h2 {
+    position: relative; left: 300px; top: 350px; width: 80%; height: 500px;
+    
+    font-size: 2em;
+
+}
+
+.paratalk {
+    position: absolute; top: 400px;
+
+}
+
+.pricing-section {
+    position: relative; top: -100px;
+    margin-top: 0;
+}
+
+.pricing-section h1 {
+  text-align: center; /* Center the heading */
+}
+
+.pricing-section .intro p {
+  text-align: justify; /* Justify the paragraph text */
+}
+
+.tiers-container {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  justify-content: center; /* optional: center the tiers */
+  gap: 20px; /* space between tiers */
+}
+
+/* Style each individual tier */
+.tier {
+  flex: 1 1 250px; /* flexible width, minimum 250px */
+  /* optional: limit max width */
+  width: 80%;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* stack content vertically */
+  align-items: center; /* center content horizontally */
+  background-color: #fff; /* optional: background color */
+  float: center;
+  position: relative;
+  left: 200px;
+
+}
+
+/* Style images inside tiers */
+.tier img {
+  max-width: 40%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+/* Center tier titles */
+.tier h2 {
+  margin-top: 0;
+  color: #007BFF;
+  text-align: center;
+}
+
+/* Optional: make paragraph text justified inside tiers */
+.tier p {
+  text-align: justify;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    
+
+
+}
