@@ -6,7 +6,7 @@
 }
 
 .logo {
-    opacity: 0.9
+    opacity: 5
 
 }
 
@@ -39,6 +39,23 @@
 
 }
 
+
+/* Style for the regular links */
+.header-right a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+
+/* Style for the active link */
+.header-right a.active {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -62,13 +79,13 @@ a:hover {
 #learn {
     position: relative;
     bottom: -160px;
-    left: 650px;
+    left: 680px;
 
 
 }
 
 #learn {
-    background-color: #131c99; /* Green */
+  
   border: none;
   color: white;
   padding: 15px 32px;
@@ -78,6 +95,85 @@ a:hover {
   font-size: 16px;
 
 }
+
+#learn {
+  border: 0;
+  border: none;
+
+}
+
+#learn button {
+  padding: 14px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007BFF; /* Bootstrap blue, change as needed */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Initial glow */
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+#learn button:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #757070;
+  padding: 20px;
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  border-radius: 5px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgb(236, 236, 238);
+  text-decoration: none;
+  font-size: 17px;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-text {
+  color: rgb(236, 236, 238);
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
 
 
 
