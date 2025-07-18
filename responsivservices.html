@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts for styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="responsiveservices.css" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(2);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #3e3c52;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
+
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      color: #222;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 300px; /* Grow, shrink, basis */
+      max-width: 350px;
+      padding: 20px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .service-icon {
+      font-size: 3em;
+      color: #007BFF;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .service-title {
+      font-size: 1.25em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .service-description {
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- Header with navigation -->
+<header class="header">
+  <a href="#default" class="logo">
+    <img src="BOAcoolnew.png" alt="Logo" />
+  </a>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a class="active" href="testboaresponsiv.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="firstblog.html">Blog</a>
+    </div>
+    <br>
+
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<br>
+<br>
+<br>
+
+
+  <h1>Our Services</h1>
+  
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-envelope"></i></div>
+      <div class="service-title">Email Management</div>
+      <div class="service-description">
+        Efficiently organise and prioritise your inbox, ensuring prompt responses and streamlined communication for your business.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-users"></i></div>
+      <div class="service-title">Social Media Management</div>
+      <div class="service-description">
+        Build and maintain your brand’s online presence with engaging content, targeted scheduling, and audience interaction.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+      <div class="service-title">Data Entry</div>
+      <div class="service-description">
+        Accurately and efficiently handle data entry tasks to maintain clean, organised records, saving you time and resources.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+      <div class="service-title">HR and Payroll Services</div>
+      <div class="service-description">
+        Manage employee records, payroll processing, and HR tasks to ensure smooth and compliant human resource operations.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+      <div class="service-title">Loan Processing</div>
+      <div class="service-description">
+        Streamline the loan processing workflow with accurate data entry, document verification, and timely communication.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
+      <div class="service-title">Appointment Setting</div>
+      <div class="service-description">
+        Schedule and coordinate appointments, ensuring a well-organised calendar that enhances productivity and client satisfaction.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+      <div class="service-title">Reporting</div>
+      <div class="service-description">
+        Prepare detailed and insightful reports to keep you informed on key metrics, helping you make data-driven decisions with ease.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+      <div class="service-title">Graphic Design</div>
+      <div class="service-description">
+        Create visually engaging and brand-consistent graphics that resonate with your target audience and enhance your business’s visual appeal.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-search"></i></div>
+      <div class="service-title">SEO (Search Engine Optimisation)</div>
+      <div class="service-description">
+        Optimise your online presence with the latest SEO techniques to improve visibility and attract more organic traffic.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fab fa-linkedin"></i></div>
+      <div class="service-title">LinkedIn Lead Generation</div>
+      <div class="service-description">
+        Generate high-quality leads on LinkedIn through targeted outreach, increasing connections and engagement with potential clients.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+      <div class="service-title">Administrative Assistance</div>
+      <div class="service-description">
+        Handle a range of administrative tasks to support daily operations, allowing you to focus on higher-level business goals.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+      <div class="service-title">Executive Assistance</div>
+      <div class="service-description">
+        Provide executive-level support with calendar management, travel arrangements, and project coordination.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-phone"></i></div>
+      <div class="service-title">Cold Calling</div>
+      <div class="service-description">
+        Conduct professional cold calls to generate leads, schedule appointments, and promote your offerings.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-user-check"></i></div>
+      <div class="service-title">Recruitment Assistance</div>
+      <div class="service-description">
+        Support your hiring process by sourcing candidates, screening resumes, and coordinating interviews.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon"><i class="fas fa-video"></i></div>
+      <div class="service-title">Video Editing</div>
+      <div class="service-description">
+        Craft polished, engaging videos that tell your brand’s story with professional editing techniques.
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Slides -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Jairarvw.JPG" alt="Slide 1" />
+    
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Noviervw.JPG" alt="Slide 2" />
+    
+  </div>
+  
+  <!-- Add more slides as needed -->
+
+  <!-- Navigation buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- Dots / Indicators -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <!-- Add more dots if you add more slides -->
+</div>
+
+<br>
+
+ <div class="getin">
+    <h2>Get In Touch With Us</h2>
+    <h3>Have more time to grow your business. We'll take care of the rest.</h3>
+    <br>
+    <button><a href="firstblog.html"></a>Learn More</a></button>
+
+    </div>
+    
+<br>
+<br>
+
+    <!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <a href="#default" class="footer-logo">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px;">
+    </a>
+    <div class="footer-links">
+      <a href="boamain.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="firstblog.html">Blogs</a>
+      <a href="faqs.html">FAQs</a>
+    </div>
+    <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
+  </div>
+</footer>
+    
+
+<body>
+  <!-- Your page content -->
+
+  <!-- Load your custom script -->
+  <script src="responsiveservices.js">
+
+    
+  </script>
+</body>
+
+</body>
+</html>
