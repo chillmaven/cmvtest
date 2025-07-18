@@ -11,32 +11,109 @@
 }
 
 
-.header-right {
-  overflow: auto;
-  background-color: #757070;
-  position: fixed;
-  top: 0;
-  width: 110%;
-  padding: 20px;
-  text-decoration: underline;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 5px;
-  float: left;
-  margin-right: 20px;
-  margin-left: 0px;
-  z-index: 2;
-
+/* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
 }
 
-.header-right a {
-  float: left;
-  padding: 5px;
-  color: rgb(236, 236, 238);
+.header .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 17px;
-  width: 10%
+}
 
+.header .logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(2);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #3e3c52;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
+
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Style for the regular links */
@@ -48,15 +125,11 @@
   transition: background-color 0.3s;
 }
 
+
 /* Style for the active link */
 .header-right a.active {
   font-weight: bold;
   background-color: #ddd;
-}
-
-
-a:hover {
-  text-decoration: underline;
 }
 
 
@@ -144,57 +217,68 @@ a:hover {
     }
   }
 
-/* Footer Styles */
-.footer {
-  background-color: #757070;
-  padding: 20px;
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  clear: both;
-  border-radius: 5px;
-  z-index: 1;
+/* Make sure the section has position set, e.g., relative */
+.info-section {
+  position: relative; /* or absolute, fixed as needed */
+  z-index: 10; /* higher than other elements/backgrounds */
+  background-color: #001f3f; /* solid background to cover the background image beneath */
+  padding: 40px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo {
-  margin-bottom: 10px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
   justify-content: center;
+  color: #ffffff; /* Make all text inside white */
+}
+
+/* Content wrapper for layout */
+.info-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  color: #fff; /* White text */
+}
+
+/* Styling for each paragraph */
+.info-content p {
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
-.footer-links a {
-  color: rgb(236, 236, 238);
-  text-decoration: none;
-  font-size: 17px;
-  padding: 5px 10px;
-  transition: color 0.3s;
+/* Optional: emphasize the copyright line */
+.copyright {
+  font-weight: bold;
 }
 
-.footer-links a:hover {
-  color: #ffffff;
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+  .info-content p {
+    font-size: 1rem;
+  }
 }
 
-.footer-text {
-  color: rgb(236, 236, 238);
-  font-size: 14px;
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
   text-align: center;
 }
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
 
 
 
