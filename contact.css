@@ -171,6 +171,37 @@ input[type=submit]:hover {
 
 }
 
+ /* Container styles for responsiveness */
+  .responsive-section {
+    padding: 20px;
+    text-align: center; /* Centers all text inside */
+    max-width: 800px; /* Optional: limit width on large screens */
+    margin: 0 auto; /* Center the container itself */
+  }
+
+  /* Make headings responsive */
+  #ready h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  #ready h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+
+  /* Optional: ensure text wraps nicely on small screens */
+  @media (max-width: 600px) {
+    #ready h1 {
+      font-size: 1.5em;
+    }
+    #ready h2 {
+      font-size: 1em;
+    }
+  }
+
+
+
 footer {
   background-color: #222;
   color: #ccc;
