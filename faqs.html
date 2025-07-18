@@ -20,25 +20,36 @@
 
 
 
-<div class="header">
+<!-- Header with navigation -->
+<header class="header">
   <a href="#default" class="logo">
-  <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
+    <img src="BOAcoolnew.png" alt="Logo" />
   </a>
- </div>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="active" href="faqs.html">FAQs</a>
+      <a href="firstblog.html">Blog</a>
+    </div>
+    <br>
 
-  <div class="header-right">
-    <a href="#default" class="logo">
-  <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
-  </a>
-    <a href="boamain.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="aboutus.html">About</a>
-    <a href="pricing.html">Pricing</a>
-    <a class="active" href="faqs.html">FAQs</a>
-    <a href="firstblog.html" >Why BOA?</a>
-  
-  </div>
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
 
 </head>
@@ -64,11 +75,23 @@
     <p style="margin-top:40px;">If you have further questions, feel free to contact us directly—we are always here to help!</p>
   </div>
 
-<!-- Footer Section -->
-<div class="footer">
+  <br>
+
+  <section class="info-section">
+    <div class="info-content">
+      <p class="copyright">
+        &copy; 2024, Global Change Solutions Pty Ltd Trading As Blue Ocean Angels
+      </p>
+      <p class="abn">ABN 72 671 469 051</p>
+      <p class="address">PO Box 4122, Knox City Centre, VIC, 3152</p>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer>
   <div class="footer-content">
     <a href="#default" class="footer-logo">
-      <img src="boalogonew.png" alt="Logo" width="60" height="50">
+      <img src="boalogonew.png" alt="Logo" style="width:60px; height:50px;">
     </a>
     <div class="footer-links">
       <a href="boamain.html">Home</a>
@@ -79,8 +102,58 @@
     </div>
     <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
   </div>
-</div>
+</footer>
 
 
 </body>
+<script>
+
+// Add event listener to toggle button
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+
+
+
+function toggleDropdown() {
+  document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementById('dropdownContent');
+    if (dropdowns.classList.contains('show')) {
+      dropdowns.classList.remove('show');
+    }
+  }
+};
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+// Optional: Close dropdown if clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].style.display === "block") {
+        dropdowns[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
 </html>
