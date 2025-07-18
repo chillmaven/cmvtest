@@ -11,33 +11,105 @@
 }
 
 
-.header-right {
-  overflow: auto;
-  background-color: #757070;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 12px;
-  text-decoration: underline;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 5px;
-  float: left;
-  margin-right: 20px;
-  margin-left: 0px;
-  z-index: 2;
-
+ /* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
 }
 
-.header-right a {
-  float: left;
-  padding: 5px;
-  color: rgb(236, 236, 238);
+.header .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 17px;
-  width: 10%
-
 }
+
+.header .logo img {
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #3e3c52;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
+
 
 a:hover {
   text-decoration: underline;
@@ -61,7 +133,7 @@ a:hover {
 
 .talk {
   width: 100%; height: 700px;
-    background-image: url(pricingfold.jpg);
+    
     background-size: 100%;
     background-position: right;
     background-repeat: no-repeat;
@@ -70,6 +142,9 @@ a:hover {
 
 
 }
+
+
+
 
 .talk > h1 {
     position: absolute; left: 200px; top: 250px; width: 100%; height: 500px;
@@ -90,113 +165,91 @@ a:hover {
 
 }
 
+/* Style for the entire pricing section container */
 .pricing-section {
-    position: relative; top: -100px;
-    margin-top: 0;
+  background-color: #0c0f31; /* dark blue background */
+  padding: 20px;
+  color: #fff; /* text color for readability */
+  text-align: center;
 }
 
+/* Style for the main heading */
 .pricing-section h1 {
-  text-align: center; /* Center the heading */
-}
-
-.pricing-section .intro p {
-  text-align: justify; /* Justify the paragraph text */
-}
-
-.tiers-container {
-  display: flex;
-  flex-wrap: wrap; /* allow wrapping on small screens */
-  justify-content: center; /* optional: center the tiers */
-  gap: 20px; /* space between tiers */
-}
-
-/* Style each individual tier */
-.tier {
-  flex: 1 1 250px; /* flexible width, minimum 250px */
-  /* optional: limit max width */
-  width: 80%;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column; /* stack content vertically */
-  align-items: center; /* center content horizontally */
-  background-color: #fff; /* optional: background color */
-  float: center;
-  position: relative;
-  left: 200px;
-
-}
-
-/* Style images inside tiers */
-.tier img {
-  max-width: 40%;
-  height: auto;
-  margin: 10px 0;
-  border-radius: 4px;
-}
-
-/* Center tier titles */
-.tier h2 {
-  margin-top: 0;
-  color: #007BFF;
-  text-align: center;
-}
-
-/* Optional: make paragraph text justified inside tiers */
-.tier p {
-  text-align: justify;
-}
-
-
-
-
-
-/* Container styling */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* Highlighted header */
-h1.highlighted {
-  display: inline-block;
-  padding: 20px 40px;
-  background-color: #313fc0;
-  border: 1px solid #0f0e0d;
-  border-radius: 8px;
-  font-size: 2em;
-  color: #333;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* Buttons container with side-by-side layout */
-.buttons-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-/* Individual text sections */
-.text-section {
-  width: 48%;
-}
-
-.text-section h2 {
-  margin-top: 0;
-  font-size: 1.2em;
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-.text-section p {
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.4;
+/* Style for the introduction paragraph */
+.pricing-section .intro p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.2em;
 }
+
+/* Common styles for all tier sections */
+.tier {
+  background-color: rgba(255, 255, 255, 0.1); /* optional: semi-transparent background for contrast */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Tier headings */
+.tier h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* Tier images */
+.tier img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* Price styling */
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 10px;
+  }
+
+  .pricing-section h1 {
+    font-size: 2em;
+  }
+
+  .pricing-section .intro p {
+    font-size: 1em;
+  }
+
+  .tier {
+    padding: 15px;
+  }
+
+  .tier h2 {
+    font-size: 1.5em;
+  }
+
+  .tier img {
+    max-width: 100%;
+  }
+
+  .price {
+    font-size: 1.1em;
+  }
+}
+
 
 /* Buttons styling */
 .buttons {
@@ -238,57 +291,315 @@ h1.highlighted {
 }
 
 
-/* Footer Styles */
-.footer {
-  background-color: #757070;
-  padding: 20px;
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  clear: both;
-  border-radius: 5px;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo {
-  margin-bottom: 10px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: rgb(236, 236, 238);
-  text-decoration: none;
-  font-size: 17px;
-  padding: 5px 10px;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: #ffffff;
-}
-
-.footer-text {
-  color: rgb(236, 236, 238);
-  font-size: 14px;
+/* Style for the trusted businesses section */
+.trust-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* optional: light background for contrast */
   text-align: center;
 }
+
+.trust-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.trust-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid container for images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Style for each grid item */
+.grid-item img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .trust-section {
+    padding: 20px 10px;
+  }
+
+  .trust-section h2 {
+    font-size: 1.5em;
+  }
+
+  .trust-section p {
+    font-size: 1em;
+  }
+
+  .grid-item img {
+    max-width: 150px;
+  }
+}
+
+
+.container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      width: 100%;
+    }
+
+    /* Style for the h2 to be responsive and centered */
+    h2 {
+      font-size: 5vw; /* Responsive font size based on viewport width */
+      text-align: center;
+      margin: 0 20px; /* some horizontal margin for small screens */
+    }
+
+    /* Optional: Add media query for very small screens */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 8vw;
+      }
+    }
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  position: relative;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Images inside slides */
+.mySlides img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Caption text */
+.text {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  background: rgba(0,0,0,0.4);
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Number text (slide indicator) */
+.numbertext {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 1em;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  border-radius: 50%;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Dots/bullets */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+
+
+/* Section styling */
+.find-angel-section {
+  background-color: #000; /* Black background for the section */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Content wrapper for layout */
+.content-wrapper {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  color: #fff; /* White text */
+}
+
+/* Section title style */
+.section-title {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Description paragraphs */
+.description {
+  font-size: 1.8vw;
+  margin-bottom: 15px;
+}
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Button styles */
+.btn {
+  padding: 15px 30px;
+  font-size: 1.6vw;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+/* Primary button style */
+.primary-btn {
+  background-color: #1f1888; /* Light greenish-blue */
+  color: #fff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #558b2f;
+}
+
+/* Secondary button style */
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.secondary-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Reduce font sizes on smaller screens */
+  .section-title {
+    font-size: 6vw;
+  }
+  .description {
+    font-size: 3.5vw;
+  }
+  .btn {
+    font-size: 3vw;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust font sizes for very small screens */
+  .section-title {
+    font-size: 8vw;
+  }
+  .description {
+    font-size: 4.5vw;
+  }
+  .btn {
+    font-size: 3.5vw;
+    padding: 10px 20px;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
 
 html, body
 {
