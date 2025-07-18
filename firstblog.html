@@ -23,21 +23,36 @@
 
 
 
-<div class="header-right">
-        <a href="#default" class="logo">
-        <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
-        </a>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="aboutus.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faqs.html">FAQs</a>
-        <a class="active" href="firstblog.html">Why BOA?</a>
-  
+<!-- Header with navigation -->
+<header class="header">
+  <a href="#default" class="logo">
+    <img src="BOAcoolnew.png" alt="Logo" />
+  </a>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="responsivservices.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faqs.html">FAQs</a>
+      <a class="active" href="firstblog.html">Blog</a>
     </div>
-  </div>
-</div>
+    <br>
+
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
 
     </style>
@@ -80,11 +95,11 @@
     <p>Ready to discover how Blue Ocean Angels can transform your business? <a href="contact.html">Contact us</a> today for a free consultation.</p>
 <br>
 
-<!-- Footer Section -->
-<div class="footer">
+<!-- Footer -->
+<footer>
   <div class="footer-content">
     <a href="#default" class="footer-logo">
-      <img src="boalogonew.png" alt="Logo" width="60" height="50">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px; filter: brightness(2);">
     </a>
     <div class="footer-links">
       <a href="boamain.html">Home</a>
@@ -95,8 +110,61 @@
     </div>
     <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
   </div>
-</div>
+</footer>
 
 </head>
-<body>
+
+
+  <script>
+
+    // Add event listener to toggle button
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+
+
+
+function toggleDropdown() {
+  document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementById('dropdownContent');
+    if (dropdowns.classList.contains('show')) {
+      dropdowns.classList.remove('show');
+    }
+  }
+};
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+// Optional: Close dropdown if clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].style.display === "block") {
+        dropdowns[i].style.display = "none";
+      }
+    }
+  }
+}
+
+  </script>
+</body>
+</html>
 
