@@ -1,100 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Ocean Virtual Assistants</title>
-    <link rel="stylesheet" href="boamain.css" />
- <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blue Ocean Virtual Assistants</title>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<!-- Optional: Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(2);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
 
 
-    <div class="header-right">
-        <a href="#default" class="logo">
-        <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
-        </a>
-        <a class="active" href="boamain.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="aboutus.html">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="firstblog.html" >Why BOA?</a>
-        
-  </div>
-</div>
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the regular links */
+.header-right a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
 
-  
-  <div class="dropdown">
-  <button class="dropbtn">Blog</button>
-  <div class="dropdown-content">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Posts</a>
-    <a href="#">Contact</a>
-  </div>
-</div>
-
-        </div>
-
-    
+/* Style for the active link */
+.header-right a.active {
+  font-weight: bold;
+  background-color: #ddd;
+}
 
 
 
+.elevate {
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url("foldimage1.jpg"); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section without distortion */
+  background-position: center; /* Keeps the focus centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+  /* Optional: add a background overlay for better text readability */
+  position: relative;
+  color: #fff; /* Text color for contrast */
+}
+
+/* Optional overlay for readability */
+.elevate::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
+  z-index: 0;
+}
+
+.elevate h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+/* Section styles */
+section.elevate {
+  padding: 40px 20px;
+  background-color: #e0f0ff;
+  text-align: center;
+}
+
+section.elevate h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#proseso, #skillz, #systema, #sensiballs, #communitiz {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#proseso h2, #skillz h2, #sensiballs h2, #communitiz h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+#proseso p, #skillz p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Image responsiveness */
+#prosimg img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Find Angel section */
+.findangel {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f8ff;
+}
+
+.findangel h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.findangel button {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.findangel button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Basic styles for dropdown */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the button */
+.dropbtn {
+  background-color: #4CAF50; /* Green, change as needed */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* aligns below the button */
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: rgb(100, 96, 96);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  width: 50px;
+  height: 50px;
+  background-color: #3e3c52;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 24px; /* Larger lines */
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+  .dropbtn {
+    display: none;
+  }
+}
+
+#proseso {
+  background-color: #d0e7f9; /* Light bluish color */
+}
+
+/* Button style with glow effect */
+.glow-button {
+  background-color: #6677a8; /* Dark background similar to your header */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative; right: -15x;
+}
+
+/* Glowing effect on hover */
+.glow-button:hover {
+  box-shadow: 0 0 15px 3px #4d4f55; /* Glowing bluish shadow */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+@media(max-width: 768px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center horizontally if needed */
+    gap: 20px; /* Space between logo and button */
+  }
+
+  /* Hide nav-links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show the button near the logo */
+  #responsiveButton {
+    margin-top: 10px;
+    /* Position it just below or near the logo if needed */
+  }
+}
+
+</style>
 </head>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+<!-- Header with navigation -->
+<header class="header">
+  <a href="#default" class="logo">
+    <img src="BOAcoolnew.png" alt="Logo" />
+    <button class="glow-button">Let's Talk!</button>
+  </a>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a class="active" href="testboaresponsiv.html">Home</a>
+      <a href="responsivservices.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="aboutus.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="firstblog.html">Blog</a>
+
+      
+    </div>
+    <br>
+
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer to simulate original spacing -->
+<br><br>
 
 <section class="elevate">
-<h1><strong><span style="background-color: rgb(22, 60, 185)";>Elevate Your Business with High-Quality Virtual Talent</span></strong></h1>
-
-
-
+  <h1><strong><span style="background-color: rgb(22, 60, 185); color: #fff; padding: 0 10px;">Elevate Your Business with High-Quality Virtual Talent</span></strong></h1>
 </section>
 
+<br>
 
+<!-- Sensible Section -->
+<div id="sensiballs">
+  <h2>Smart Talent Solutions at Sensible Prices</h2>
+  <p>We provide top-tier virtual assistant services tailored to your business needs, from cost-effective Gold support to executive-level Diamond management. Enjoy Australian-level expertise at overseas prices, helping you streamline operations and drive growth affordably.</p>
+</div>
 
-
+<!-- Process Section -->
 <div id="proseso">
-<h2>How Our Process Works</h2>
-<p>We source talented professionals from overseas and invest in comprehensive training to align with your unique business needs. Your dedicated Angel will learn your specific workflows and preferences, giving you complete control over how tasks are executed—ensuring consistency and quality.</p>
-
-
+  <h2>How Our Process Works</h2>
+  <p>We source talented professionals from overseas and invest in comprehensive training to align with your unique business needs. Your dedicated Angel will learn your specific workflows and preferences, giving you complete control over how tasks are executed—ensuring consistency and quality.</p>
 </div>
 
+<!-- Skilled Angels -->
 <div id="skillz">
-<h2>Skilled Angels</h2>
-<p>Our Angels possess excellent English communication skills—fluent in reading, writing, and speaking—facilitating clear, seamless interactions. To maximize efficiency, we recommend assigning up to five core tasks per Angel, allowing them to focus and deliver exceptional results.</p>
-
+  <h2>Skilled Angels</h2>
+  <p>Our Angels possess excellent English communication skills—fluent in reading, writing, and speaking—facilitating clear, seamless interactions. To maximize efficiency, we recommend assigning up to five core tasks per Angel, allowing them to focus and deliver exceptional results.</p>
 </div>
 
+<!-- Illustration Image -->
 <div id="systema">
-</div>
-<i class="fa-regular fa-chart-diagram"></i>
-
+  <img src="processimage1.jpg" alt="team" style="width:100%; max-width:600px; height:auto; display:block; margin:auto;">
 </div>
 
-<div id="prosimg">
-<p><img src="processimage1.jpg" alt="team" style="float:right;width:600px;height:300px;"></p>
+<div id="communitiz">
+  <h2>Changing Communities Since 2023</h2>
+  <p>Blue Ocean Angels goes beyond offering top-tier virtual assistants; we empower developing regional communities worldwide.</p>
+  <br>
+  <p>By employing university-educated professionals from these areas, we create valuable opportunities and foster positive change.</p>
+  <br>
+  <p>From everyday administrative support to executive-level virtual management, our team delivers Australian-quality tested expertise at overseas prices—providing your business with exceptional service, affordability, and a meaningful global impact.</p>
 </div>
 
+<!-- Call to Action -->
 <section class="findangel">
   <h2>Ready To Take Your Business To The Next Level?</h2>
-  <button><center><a href="contact.html">Find My Angel</a></center></button>
-  <br>
-  
-<!-- Footer Section -->
-<div class="footer">
+  <button><a href="contact.html">Find My Angel</a></button>
+</section>
+
+<!-- Footer -->
+<footer>
   <div class="footer-content">
     <a href="#default" class="footer-logo">
-      <img src="boalogonew.png" alt="Logo" width="60" height="50">
+      <img src="boalogonew.png" alt="Logo" style="width:60px; height:50px;">
     </a>
     <div class="footer-links">
       <a href="boamain.html">Home</a>
@@ -105,8 +477,45 @@
     </div>
     <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
   </div>
-</div>
+</footer>
 
-</section>
+<script>
+function toggleDropdown() {
+  document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementById('dropdownContent');
+    if (dropdowns.classList.contains('show')) {
+      dropdowns.classList.remove('show');
+    }
+  }
+};
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+// Optional: Close dropdown if clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].style.display === "block") {
+        dropdowns[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+
 </body>
 </html>
