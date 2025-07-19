@@ -151,45 +151,71 @@ a:hover {
 
 
 
-.elevate {
-  padding: 40px 20px;
-  text-align: center;
-  background-image: url("foldimage1.jpg"); /* Replace with your image path */
-  background-size: cover; /* Ensures the image covers the entire section without distortion */
-  background-position: center; /* Keeps the focus centered */
-  background-repeat: no-repeat; /* Prevents tiling */
-  /* Optional: add a background overlay for better text readability */
-  position: relative;
-  color: #fff; /* Text color for contrast */
-}
+/* Style for the elevate section with background image */
+  .elevate {
+    position: relative;
+    padding: 60px 20px;
+    /* Replace with your background image URL */
+    background-image: url('girllaptop.jpg');
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #030303; /* Text color for contrast */
+  }
 
-/* Optional overlay for readability */
-.elevate::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.4); /* semi-transparent overlay */
-  z-index: 0;
-}
+  /* Overlay for better text visibility (optional) */
+  .elevate::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(31, 29, 29, 0.4); /* semi-transparent overlay */
+    z-index: 0;
+  }
 
-.elevate h1 {
-  position: relative;
-  z-index: 1;
-  font-size: 2rem;
-}
+  /* Content container to keep content above overlay and aligned left */
+  .elevate > * {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Left-align all text */
+  }
 
-/* Section styles */
-section.elevate {
-  padding: 40px 20px;
-  background-color: #e0f0ff;
-  text-align: center;
-}
+  /* Styling for the h1 */
+  .elevate h1 {
+    font-size: 2em; color: white;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
 
-section.elevate h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+  /* Paragraph styles */
+  .elevate p {
+    font-size: 1.2em; color: white;
+    margin-bottom: 15px;
+  }
+
+  /* Button styles similar to the image */
+  .elevate .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #3C4858; /* Dark blue/gray color */
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover effect for the button */
+  .elevate .btn:hover {
+    background-color: #2c3e50; /* Darker shade on hover */
+  }
+
+
 
 #proseso, #skillz, #systema, #sensiballs, #communitiz {
   padding: 20px;
@@ -389,7 +415,7 @@ footer a:hover {
   </a>
   <nav class="nav-container">
     <div class="nav-links">
-      <a class="active" href="index.html">Home</a>
+      <a class="active" href="testboaresponsiv.html">Home</a>
       <a href="responsivservices.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="aboutus.html">About</a>
@@ -419,15 +445,21 @@ footer a:hover {
 <br><br>
 
 <section class="elevate">
-  <h1><strong><span style="background-color: rgb(22, 60, 185); color: #fff; padding: 0 10px;">Elevate Your Business with High-Quality Virtual Talent</span></strong></h1>
+  <h1><span>Smart Solutions, Sensible Prices</span></h1>
+  <p>We provide top-tier virtual assistant services.</p>
+  <br>
+  <p>From cost-effective Gold-support to executive-level Diamond management, we've got you covered.</p>
+  <br>
+  <p><strong>We'll help you accelerate your business growth!</strong></p>
+  <a href="contact.html" class="btn">FIND MY ANGEL</a>
 </section>
 
 <br>
 
 <!-- Sensible Section -->
 <div id="sensiballs">
-  <h2>Smart Talent Solutions at Sensible Prices</h2>
-  <p>We provide top-tier virtual assistant services tailored to your business needs, from cost-effective Gold support to executive-level Diamond management. Enjoy Australian-level expertise at overseas prices, helping you streamline operations and drive growth affordably.</p>
+  <h2>Grow Your Business - The Smart Way</h2>
+  <p>With the help of our top-level, efficient Angels, your business can grow remarkably - while giving you ample time to do the things you love. After all, it's better to grow in a smart way.</p>
 </div>
 
 <!-- Process Section -->
