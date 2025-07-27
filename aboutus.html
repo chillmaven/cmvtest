@@ -20,24 +20,37 @@
 
 
 
-<div class="header">
+<!-- Header with navigation -->
+<header class="header">
   <a href="#default" class="logo">
-  <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
+    <img src="BOAcoolnew.png" alt="Logo" />
   </a>
- </div>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="testboaresponsiv.html">Home</a>
+      <a href="responsivservices.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="aboutus.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="firstblog.html">Blog</a>
+    </div>
+    <br>
 
-  <div class="header-right">
-    <a href="#default" class="logo">
-  <img src="boalogonew.png" alt="Logo" class="logo" width="60" height="50">
-  </a>
-    <a href="boamain.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a class="active" href="aboutus.html">About</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="faqs.html">FAQs</a>
-    <a href="firstblog.html" >Why BOA?</a>
-  
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
   </div>
 </head>
 <body>
@@ -47,44 +60,67 @@
 <br>
 <br>
 
-<div id="bldg">
-<p><img src="bldgabt.jpg" alt="woman working on laptop" style="float:right;width:600px;height:300px;"></p>
-</div>
-
-<div id="about">
-    <h1>About Us<h1>
-    </div>
-    <br>
-<div id="abtpara">   
+<div class="section">
+  <div class="text-content">
+    <h1>About Blue Ocean Angels</h1>
     <p>Blue Ocean Angels is a Melbourne-based Virtual Assistant recruitment firm dedicated to connecting Australian businesses with high-quality, cost-effective virtual support. We specialise in matching companies with skilled, university-educated professionals from rural communities in South East Asia, empowering both businesses and underserved regions. With flexible tiered services—ranging from entry-level support to executive virtual management—Blue Ocean Angels provides tailored assistance to streamline operations, enhance productivity, and drive growth, all at affordable rates. Discover a unique blend of quality, impact, and value with Blue Ocean Angels.</p>
-    </div>
     
-<br>
-<br>
-<br>
-<br>
+  </div>
+  <div class="images-container">
+    <div class="image-box">
+      <img src="abtus1.jpg" alt="two men discussing" />
+    </div>
+    <div class="image-box">
+      <img src="abtus2.jpg" alt="people working with laptops open" />
+    </div>
+    <div class="image-box">
+      <img src="abtus3.jpg" alt="Woman using phone" />
+    </div>
+  </div>
+</div>
 
-<div id="excel">
+<!-- HTML Snippet -->
+<section class="mission-section">
+  <div class="content-wrapper">
+    <div class="text-block">
+      <h2>Our Mission</h2>
+      <p>Our Mission
+Blue Ocean Angels is dedicated to connecting Australian businesses with high-quality, cost-effective virtual support from skilled, university-educated professionals in rural communities across South East Asia. Our mission is to empower both businesses and underserved regions by providing tailored virtual assistance that streamlines operations, enhances productivity, and drives growth. We are committed to delivering flexible, tiered services—from entry-level support to executive virtual management—ensuring that our clients receive impactful, affordable solutions with a focus on quality, impact, and value.</p>
+      <p>At Blue Ocean Angels, we focus on working closely with clients to fully understand their unique needs. Our goal is to improve your business by streamlining processes and boosting productivity.</p>
+    </div>
+    <div class="image-block">
+      <img src="foldimage1.jpg" alt="Young man working on laptop" />
+    </div>
+  </div>
+</section>
+
+<div class="excel-section">
+  <div class="text-content">
     <h1>Excellence, Redefined</h1>
-    <br>
-    <p><center><strong>We'll help you save time - so you can make more impact!</strong></center></p>
+    <p><strong>We'll help you save time - so you can make more impact!</strong></p>
     <p><strong>Give us a call today, and we'll help you get your next high-performing Angel!</strong></p>
-    <br>
-
-
+  </div>
+  <div class="button-container">
+    <a href="/">
+      <button class="learn-button">Learn More</button>
+    </a>
+  </div>
 </div>
 
-<div id="learn">
-  <a href="/">
-  <button>Learn More</button>
-  </a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-</div>
 
-<div class="footer">
+  <!-- Footer -->
+<footer>
   <div class="footer-content">
     <a href="#default" class="footer-logo">
-      <img src="boalogonew.png" alt="Logo" width="60" height="50">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px;">
     </a>
     <div class="footer-links">
       <a href="boamain.html">Home</a>
@@ -95,7 +131,46 @@
     </div>
     <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
   </div>
-</div>
+</footer>
+
+<script>
+
+function toggleDropdown() {
+  document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementById('dropdownContent');
+    if (dropdowns.classList.contains('show')) {
+      dropdowns.classList.remove('show');
+    }
+  }
+};
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+// Optional: Close dropdown if clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].style.display === "block") {
+        dropdowns[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
 
   </body>
 </html>
