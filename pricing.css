@@ -29,11 +29,10 @@
 }
 
 .header .logo img {
-  width: 60px;
-  height: 50px;
+  width: 100px;
+  height: 80px;
   object-fit: contain;
   filter: brightness(2);
-  
 }
 
 .nav-links {
@@ -478,15 +477,7 @@ a:hover {
 
 
 
-/* Section styling */
-.find-angel-section {
-  background-color: #000; /* Black background for the section */
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Full viewport height */
-}
+
 
 /* Content wrapper for layout */
 .content-wrapper {
@@ -509,14 +500,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-/* Buttons container */
-.buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 30px;
-}
+
 
 /* Button styles */
 .btn {
@@ -528,28 +512,7 @@ a:hover {
   min-width: 150px;
 }
 
-/* Primary button style */
-.primary-btn {
-  background-color: #1f1888; /* Light greenish-blue */
-  color: #fff;
-  border: none;
-}
 
-.primary-btn:hover {
-  background-color: #558b2f;
-}
-
-/* Secondary button style */
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.secondary-btn:hover {
-  background-color: #fff;
-  color: #000;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -617,6 +580,13 @@ a:hover {
     height: auto;
     border-radius: 8px;
   }
+
+  /* Media query to increase video width to 80% on screens narrower than 768px */
+@media (max-width: 768px) {
+  .video-player {
+    max-width: 80%;
+  }
+}
 
   /* Text box styles */
   .text-box {
