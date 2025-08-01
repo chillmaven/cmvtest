@@ -31,12 +31,6 @@
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-/* Media query to hide the button on screens wider than 768px */
-@media (min-width: 769px) {
-  .glow-button {
-    display: none;
-  }
-}
 
 /* Media query to move the button 300px to the right on small screens */
 @media (max-width: 768px) {
@@ -47,7 +41,12 @@
 }
 
 
-
+/* Media query to hide the button on screens wider than 768px */
+@media (min-width: 769px) {
+  .glow-button {
+    display: none;
+  }
+}
 
 
 
