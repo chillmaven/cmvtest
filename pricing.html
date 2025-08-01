@@ -126,6 +126,65 @@
       font-size: 1.5em;
     }
   }
+
+  /* Container styling */
+  .header-with-button {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #403f44; /*  background */
+    padding: 20px;
+  }
+
+  /* Style for the h2 */
+  .header-with-button h2 {
+    flex: 1 1 70%; /* grow and shrink as needed */
+    color: #fff;
+    margin: 0;
+    font-size: 1.8em;
+  }
+
+  /* Style for the button */
+  .glow-button {
+    flex: 1 1 25%;
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(45deg, #0d17a5, #151c7e);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(24, 198, 221, 0.7);
+    transition: all 0.3s ease;
+  }
+
+  /* Hover effect for the button */
+  .glow-button:hover {
+    box-shadow: 0 0 25px rgba(255, 111, 0, 1);
+    transform: scale(1.05);
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media(max-width: 768px) {
+    .header-with-button {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-with-button h2 {
+      flex: 1 1 100%;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .glow-button {
+      flex: 1 1 100%;
+      width: 100%;
+      font-size: 1.2em;
+    }
+  }
+  
 </style>
 
 <section class="talk">
@@ -235,30 +294,20 @@
   
   <!-- Text box -->
   <div class="text-box">
-    <h2>Here's What the Owner of Core Story Thinks of Us...</h2>
+    <h2>Here's What the Owner of Core Story Thinks of BOA...</h2>
     <br>
     <p><h3>Aleyx emphasized how precise we are on meeting her business needs. Perhaps we can do the same for your business.</h3></p>
   </div>
 </div>
 
 
+<br>
 
+<div class="header-with-button">
+  <h2>Are you ready to get some time back in your day? Let us find you an Angel!</h2>
+  <button class="glow-button">Find My Angel</button>
+</div>
 
- <section class="find-angel-section">
-    <div class="content-wrapper">
-      <h2 class="section-title">FIND MY ANGEL</h2>
-      <p class="description">
-        Are you ready to get some time back in your day? Let us find you an Angel!
-      </p>
-      <p class="description">
-        Still on the fence? Look at the value they could bring to your business!
-      </p>
-      <div class="buttons-container">
-        <button class="btn primary-btn">FIND MY ANGEL</button>
-        <button class="btn secondary-btn">STILL UNDECIDED</button>
-      </div>
-    </div>
-  </section>
 
 <br>
 <br>
