@@ -11,34 +11,164 @@
 }
 
 
-.header-right {
-  overflow: auto;
-  background-color: #757070;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 12px;
-  text-decoration: underline;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 5px;
-  float: left;
-  margin-right: 20px;
-  margin-left: 0px;
-  z-index: 2;
-
+/* Button style with glow effect */
+.glow-button {
+  background-color: #6677a8; /* Dark background similar to your header */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative; right: 360px;
 }
 
-.header-right a {
-  float: left;
-  padding: 5px;
-  color: rgb(236, 236, 238);
+/* Glowing effect on hover */
+.glow-button:hover {
+  box-shadow: 0 0 15px 3px #4d4f55; /* Glowing bluish shadow */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Media query to move the button 300px to the right on small screens */
+@media (max-width: 768px) {
+  .glow-button {
+    left: 10px; /* 355px + 300px offset */
+    position: relative; /* Ensure position is relative within media query */
+  }
+}
+
+
+
+
+
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 17px;
-  width: 10%
-
 }
 
+.header .logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(2);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* aligns below the button */
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: rgb(100, 96, 96);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  width: 50px;
+  height: 50px;
+  background-color: #3e3c52;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 24px; /* Larger lines */
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+  .dropbtn {
+    display: none;
+  }
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
 
 /* Style for the regular links */
 .header-right a {
@@ -56,15 +186,145 @@
   background-color: #ddd;
 }
 
-a:hover {
-  text-decoration: underline;
+
+
+
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .text-content {
+    flex: 1 1 45%;
+    padding: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text-content p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+
+  .images-container {
+    flex: 1 1 55%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .image-box {
+    position: relative;
+    flex: 1 1 calc(50% - 20px);
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 300px;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Optional: add hover effect on images */
+  .image-box img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive styles */
+  @media(max-width: 768px){
+    .section {
+      flex-direction: column;
+    }
+    .text-content, .images-container {
+      flex: 1 1 100%;
+      padding: 10px;
+    }
+    .images-container {
+      justify-content: center;
+    }
+    .image-box {
+      flex: 1 1 80%;
+    }
+  }
+
+  /* CSS Snippet */
+.mission-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
 }
 
-#abtpara {
-    text-align: justify;
-    width: 50%;
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+}
 
+.text-block {
+  flex: 1 1 45%;
+}
 
+.text-block h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.text-block p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.image-block {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-block img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive styles for smaller screens */
+@media(max-width: 768px){
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-block, .image-block {
+    flex: 1 1 100%;
+  }
+  .text-block {
+    text-align: center;
+  }
 }
 
 #excel {
@@ -119,58 +379,104 @@ a:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-
-/* Footer Styles */
-.footer {
-  background-color: #757070;
-  padding: 20px;
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  clear: both;
-  border-radius: 5px;
-  z-index: 1;
+/* Container for the section, flexible layout */
+.excel-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-logo {
-  margin-bottom: 10px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 10px;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f0f0f0; /* optional background color */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer-links a {
-  color: rgb(236, 236, 238);
-  text-decoration: none;
-  font-size: 17px;
-  padding: 5px 10px;
-  transition: color 0.3s;
+/* Text content styles */
+.text-content {
+  flex: 1 1 60%;
+  text-align: center;
+  padding: 20px;
 }
 
-.footer-links a:hover {
-  color: #ffffff;
+.text-content h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
-.footer-text {
-  color: rgb(236, 236, 238);
-  font-size: 14px;
+.text-content p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Button container to center the button */
+.button-container {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Style the button */
+.learn-button {
+  padding: 14px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007BFF; /* Bootstrap blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.learn-button:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive styles for smaller screens */
+@media(max-width: 768px){
+  .excel-section {
+    flex-direction: column;
+  }
+  .text-content, .button-container {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+  .text-content h1 {
+    font-size: 1.5em;
+  }
+  .learn-button {
+    width: 100%;
+    font-size: 1.1em;
+  }
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
   text-align: center;
 }
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
 
 
 
