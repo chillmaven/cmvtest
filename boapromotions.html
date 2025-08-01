@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BOA Promotions</title>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+  rel="stylesheet"
+/>
+<!-- Optional: Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #4d4f55;
+  position: relative;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header .logo img {
+  width: 100px;
+  height: 80px;
+  object-fit: contain;
+  filter: brightness(2);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #a19696;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Dropdown styles for mobile */
+.dropdown {
+  position: relative;
+  display: none; /* Hidden on desktop, visible on mobile via media query */
+}
+
+.dropbtn {
+  background-color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover for desktop, toggle for mobile */
+@media(max-width: 768px) {
+  /* Hide standard nav links */
+  .nav-links {
+    display: none;
+  }
+  /* Show dropdown button */
+  .dropdown {
+    display: block;
+  }
+}
+
+@media(max-width: 768px) {
+  /* Show dropdown content when active */
+  .dropdown.active .dropdown-content {
+    display: flex;
+  }
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the regular links */
+.header-right a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+
+/* Style for the active link */
+.header-right a.active {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Basic styles for dropdown */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the button */
+.dropbtn {
+  background-color: #4CAF50; /* Green, change as needed */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* aligns below the button */
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: rgb(100, 96, 96);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  width: 50px;
+  height: 50px;
+  background-color: #3e3c52;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 24px; /* Larger lines */
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+  .dropbtn {
+    display: none;
+  }
+}
+
+#proseso {
+  background-color: #d0e7f9; /* Light bluish color */
+}
+
+/* Button style with glow effect */
+.glow-button {
+  background-color: #6677a8; /* Dark background similar to your header */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative; right: 355px;
+}
+
+/* Glowing effect on hover */
+.glow-button:hover {
+  box-shadow: 0 0 15px 3px #4d4f55; /* Glowing bluish shadow */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Media query to move the button 300px to the right on small screens */
+@media (max-width: 768px) {
+  .glow-button {
+    right: 655px; /* 355px + 300px offset */
+    position: relative; /* Ensure position is relative within media query */
+  }
+}
+
+@media(max-width: 768px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center horizontally if needed */
+    gap: 20px; /* Space between logo and button */
+  }
+
+  /* Hide nav-links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show the button near the logo */
+  #responsiveButton {
+    margin-top: 10px;
+    /* Position it just below or near the logo if needed */
+  }
+}
+
+.promo-box {
+  background: linear-gradient(135deg, #3228b8, #343b44); /* colorful gradient */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .promo-box {
+    font-size: 0.5em;
+    padding: 30px 15px;
+  }
+}
+
+
+.attention-heading {
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* vibrant gradient */
+  color: white;
+  font-size: 2.5em;
+  padding: 30px 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin: 20px auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .attention-heading {
+    font-size: 2em;
+    padding: 20px 15px;
+  }
+}
+
+/* Style for the scroll container */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Center items horizontally */
+  
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style for each scroll item */
+.scroll-item {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* Style for images within each item */
+.scroll-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Add glow effect on hover */
+.scroll-item:hover {
+  box-shadow: 0 0 20px rgba(53, 78, 189, 0.8); /* glow */
+  transform: scale(1.05);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .scroll-item {
+    margin: 0 10px; /* Reduce margin for tighter spacing */
+    padding: 5px 10px; /* Reduce padding for smaller screens */
+  }
+  .scroll-container {
+    padding: 10px;
+  }
+}
+
+/* Container styles */
+.cta-container {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  align-items: center; /* Center horizontally */
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5; /* Optional background */
+  width: 90%; /* Adjust as needed for responsiveness */
+  margin: 0 auto; /* Center the container on the page */
+}
+
+/* Text styles */
+.cta-text h2 {
+  text-align: center; /* Center the heading */
+  font-size: 40px; /* Increase font size */
+  margin-bottom: 15px; /* Add some spacing */
+  font-weight: bold; /* Optional, for emphasis */
+}
+
+
+/* Button styles */
+.cta-button {
+  text-align: center;  /* Center the button */
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 15px 30px; /* Adjust padding for size */
+  background-color: #3244e0; /* Example button color */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Increase button font size */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Media query for smaller screens (adjust breakpoint as needed) */
+@media (max-width: 600px) {
+  .cta-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+  .cta-text h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+  .cta-btn {
+    padding: 12px 24px; /* Adjust button padding for smaller screens */
+  }
+}
+
+
+</style>
+
+
+<!-- Header with navigation -->
+<header class="header">
+  <a href="testboaresponsiv.html" class="logo">
+    <img src="BOAcoolnew.png" alt="Logo" />
+    <a href="contact.html" button class="glow-button">Let's Talk!</button>
+  </a>
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="testboaresponsiv.html">Home</a>
+      <a href="aboutus.html">About</a>
+      <a href="responsivservices.html">Services</a>
+      <a class="active" href="boapromotions.html">BOA Promotions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="faqs.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="firstblog.html">Blog</a>
+
+      
+    </div>
+    <br>
+
+
+    <!-- Dropdown for mobile THIS IS the weird blog tab in the page-->
+    <div class="dropdown" id="mobileDropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
+      <div class="dropdown-content" id="dropdownContent">
+        <a href="testboaresponsiv.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="firstblog.html">Posts</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+
+<div class="promo-box">
+  <h1>BOA Promotions - Coming Soon!</h1>
+</div>
+
+<h2 class="attention-heading">We'll Help You Make High-Quality Business Materials</h2>
+
+
+<div class="scroll-container">
+  <div class="scroll-item">
+    <img src="promo1uniforms.jpg" alt="Uniforms" class="scroll-img" />
+    <h2>Uniforms</h2>
+  </div>
+  <div class="scroll-item">
+    <img src="promo2marquees.jpg" alt="Marquees" class="scroll-img" />
+    <h2>Marquees</h2>
+  </div>
+  <div class="scroll-item">
+    <img src="promo3station.jpg" alt="Stationary" class="scroll-img" />
+    <h2>Stationary</h2>
+  </div>
+  <div class="scroll-item">
+    <img src="promo4banner.jpg" alt="Pull Up Banners" class="scroll-img" />
+    <h2>Pull Up Banners</h2>
+  </div>
+  <div class="scroll-item">
+    <img src="promo5table.jpg" alt="Table Cloths" class="scroll-img" />
+    <h2>Table Cloths</h2>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="cta-container">
+  <div class="cta-text">
+    <h2>Let's Jumpstart Your Business Idea!</h2>
+  </div>
+  <div class="cta-button">
+    <a href="contact.html" class="cta-btn">Brainstorm with Us</a>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <a href="testboaresponsiv.html" class="footer-logo">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px; filter: brightness(2);">
+    </a>
+    <div class="footer-links">
+      <a href="testboaresponsiv.html">Home</a>
+      <a href="responsivservices.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="firstblog.html">Blogs</a>
+      <a href="faqs.html">FAQs</a>
+    </div>
+    <p class="footer-text">© 2025 Blue Ocean Angels. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function toggleDropdown() {
+  document.getElementById('dropdownContent').classList.toggle('show');
+}
+
+// Close dropdown when clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementById('dropdownContent');
+    if (dropdowns.classList.contains('show')) {
+      dropdowns.classList.remove('show');
+    }
+  }
+};
+
+function toggleDropdown() {
+  const dropdownContent = document.getElementById("dropdownContent");
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+  } else {
+    dropdownContent.style.display = "block";
+  }
+}
+
+// Optional: Close dropdown if clicking outside
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i = 0; i < dropdowns.length; i++) {
+      if (dropdowns[i].style.display === "block") {
+        dropdowns[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+
+</body>
+</html>
