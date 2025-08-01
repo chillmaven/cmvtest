@@ -61,7 +61,7 @@
 /* Slideshow container */
 .slideshow-container {
   position: relative;
-  max-width: 100%;
+  max-width: 50%;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
@@ -315,6 +315,36 @@
 }
 
 
+/* Button style with glow effect */
+.glow-button {
+  background-color: #6677a8; /* Dark background similar to your header */
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative; right: 360px;
+}
+
+/* Glowing effect on hover */
+.glow-button:hover {
+  box-shadow: 0 0 15px 3px #4d4f55; /* Glowing bluish shadow */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Media query to move the button 300px to the right on small screens */
+@media (max-width: 768px) {
+  .glow-button {
+    left: 10px; /* 355px + 300px offset */
+    position: relative; /* Ensure position is relative within media query */
+  }
+}
+
+
+
 
 
 .getin {
@@ -408,65 +438,70 @@
   .nav-links {
     display: none; /* hide desktop menu on mobile */
   }
+}
   /* If you have a menu toggle button, you can style it here */
   /* For example, show the menu when active (you'll need JS toggling class) */
 
   /* Services container: stack cards vertically */
   
-  .services-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-  } }
-
-
-
-  /* For screens 375px wide and above */
-@media (min-width: 375px) {
-  .services-container {
-    width: 90%; /* nearly fill the page, leaving some margin */
-    max-width: 382px; /* limit the maximum width to 382px to match your height dimension, if relevant */
-  }
-}
-
-  /* Service cards: full width with some padding/margin */
-  .service-card {
-    max-width: 90%;
-    width: 100%;
-    padding: 15px;
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
   }
 
-  /* Make icons smaller if needed */
-  .service-icon {
-    font-size: 2.5em;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
 
-  /* Headings font size adjustment */
-  h1 {
-    font-size: 2em;
+  .service-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    max-width: 350px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
   }
 
-  /* Body padding adjustment */
-  body {
-    padding: 10px;
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .service-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+
+  /* Justify paragraph text */
+  .service-box p {
+    text-align: justify;
   }
 
 
-/* Optional: further tweak the slideshow or other elements for mobile */
-@media(max-width: 480px) {
-  /* For very small screens, maybe reduce font sizes or hide certain elements */
-  h1 {
-    font-size: 1.8em;
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
   }
-  /* Adjust slideshow controls if needed */
-}
 
 footer {
   background-color: #222;
   color: #ccc;
   padding: 20px;
   text-align: center;
+  margin-left: calc(-50vw + 50%); /* Shift left to cover gaps */
+  margin-right: calc(-50vw + 50%); /* Shift right to cover gaps */
+  margin-bottom: calc(-50vw + 50%);
 }
 
 footer .footer-content {
