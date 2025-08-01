@@ -28,6 +28,11 @@
   padding: 10px 20px;
   background-color: #4d4f55;
   position: relative;
+  box-sizing: border-box;
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Shift left to cover gaps */
+  margin-right: calc(-50vw + 50%); /* Shift right to cover gaps */
+  margin-top: calc(-50vw + 50%);
 }
 
 .header .logo {
@@ -180,6 +185,20 @@
         font-size: 2em;
       }
     }
+
+    .button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF; /* example color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+}
+
   </style>
 </head>
 <body>
@@ -187,18 +206,22 @@
 
 <!-- Header with navigation -->
 <header class="header">
-  <a href="#default" class="logo">
+  <a href="index.html" class="logo">
     <img src="BOAcoolnew.png" alt="Logo" />
+    
   </a>
   <nav class="nav-container">
     <div class="nav-links">
-      <a class="active" href="testboaresponsiv.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
       <a href="aboutus.html">About</a>
+      <a class="active" href="responsivservices.html">Services</a>
+      <a href="boapromotions.html">BOA Promotions</a>
       <a href="pricing.html">Pricing</a>
-      <a href="faqs.html">FAQs</a>
+      <a href="faqs.html">FAQ</a>
+      <a href="contact.html">Contact</a>
       <a href="firstblog.html">Blog</a>
+
+      
     </div>
     <br>
 
@@ -207,7 +230,7 @@
     <div class="dropdown" id="mobileDropdown">
       <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
       <div class="dropdown-content" id="dropdownContent">
-        <a href="testboaresponsiv.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="aboutus.html">About</a>
         <a href="firstblog.html">Posts</a>
         <a href="contact.html">Contact</a>
@@ -224,115 +247,37 @@
 
   <h1>Our Services</h1>
   
-  <div class="services-container">
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-envelope"></i></div>
-      <div class="service-title">Email Management</div>
-      <div class="service-description">
-        Efficiently organise and prioritise your inbox, ensuring prompt responses and streamlined communication for your business.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-users"></i></div>
-      <div class="service-title">Social Media Management</div>
-      <div class="service-description">
-        Build and maintain your brand’s online presence with engaging content, targeted scheduling, and audience interaction.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-      <div class="service-title">Data Entry</div>
-      <div class="service-description">
-        Accurately and efficiently handle data entry tasks to maintain clean, organised records, saving you time and resources.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-user-shield"></i></div>
-      <div class="service-title">HR and Payroll Services</div>
-      <div class="service-description">
-        Manage employee records, payroll processing, and HR tasks to ensure smooth and compliant human resource operations.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-file-signature"></i></div>
-      <div class="service-title">Loan Processing</div>
-      <div class="service-description">
-        Streamline the loan processing workflow with accurate data entry, document verification, and timely communication.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-calendar-check"></i></div>
-      <div class="service-title">Appointment Setting</div>
-      <div class="service-description">
-        Schedule and coordinate appointments, ensuring a well-organised calendar that enhances productivity and client satisfaction.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-      <div class="service-title">Reporting</div>
-      <div class="service-description">
-        Prepare detailed and insightful reports to keep you informed on key metrics, helping you make data-driven decisions with ease.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-      <div class="service-title">Graphic Design</div>
-      <div class="service-description">
-        Create visually engaging and brand-consistent graphics that resonate with your target audience and enhance your business’s visual appeal.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-search"></i></div>
-      <div class="service-title">SEO (Search Engine Optimisation)</div>
-      <div class="service-description">
-        Optimise your online presence with the latest SEO techniques to improve visibility and attract more organic traffic.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fab fa-linkedin"></i></div>
-      <div class="service-title">LinkedIn Lead Generation</div>
-      <div class="service-description">
-        Generate high-quality leads on LinkedIn through targeted outreach, increasing connections and engagement with potential clients.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-      <div class="service-title">Administrative Assistance</div>
-      <div class="service-description">
-        Handle a range of administrative tasks to support daily operations, allowing you to focus on higher-level business goals.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-      <div class="service-title">Executive Assistance</div>
-      <div class="service-description">
-        Provide executive-level support with calendar management, travel arrangements, and project coordination.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-phone"></i></div>
-      <div class="service-title">Cold Calling</div>
-      <div class="service-description">
-        Conduct professional cold calls to generate leads, schedule appointments, and promote your offerings.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-user-check"></i></div>
-      <div class="service-title">Recruitment Assistance</div>
-      <div class="service-description">
-        Support your hiring process by sourcing candidates, screening resumes, and coordinating interviews.
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-icon"><i class="fas fa-video"></i></div>
-      <div class="service-title">Video Editing</div>
-      <div class="service-description">
-        Craft polished, engaging videos that tell your brand’s story with professional editing techniques.
-      </div>
-    </div>
-  </div>
+
+<div class="container">
+  <a href="#" class="service-box">
+  <img src="svcs1va.jpg" alt="Service Image" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;">
+  <h3>Virtual Assistant Services</h3>
+  <p>Our Virtual Assistant Services offer comprehensive support to streamline your business operations, including Executive Assistance, Email Management, HR and Payroll administration, Loan Processing, Administrative Assistance, Recruitment, Receptionist duties, and Bookkeeping. Whether you need help managing schedules, handling correspondence, processing loans, or maintaining financial records, our dedicated virtual assistants are equipped to enhance productivity and ensure smooth daily operations for your organization.</p>
+</a>
+
+<a href="#" class="service-box">
+  <img src="svcs2mktg.jpg" alt="Service Image" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;">
+  <h3>Sales & Marketing Services</h3>
+  <p>Through our Sales & Marketing Services, we will provide a full suite of solutions to boost your brand visibility and generate leads, including Social Media Management, Appointment Setting, Graphic Design, Search Engine Optimization (SEO), LinkedIn Lead Generation, Cold and Warm Calling, and Video Editing. These services are designed to enhance your online presence, engage your target audience, and drive sales growth through strategic and creative marketing efforts.</p>
+</a>
+
+<a href="#" class="service-box">
+  <img src="svcs3projects.jpg" alt="Service Image" style="width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px;">
+  <h3>Projects-Based Services</h3>
+  <p>Our Projects-based services encompass a wide range of professional solutions, including Graphic Design, Video Editing, Website Development, Market Research, Software Implementation, Consulting, and Business Trip Booking. We are dedicated to delivering tailored project support that helps your business innovate, optimize operations, and achieve strategic goals with expertise and efficiency.</p>
+</a>
+
+<a href="#" class="service-box">
+  <img src="svcs4corpo.jpg" alt="Service Image" style="width: 96%; height: auto; border-radius: 4px; margin-bottom: 15px;">
+  <h3>Corporate Services</h3>
+  <p>Take your business to the next level with our Corporate Services which include Video Editing, Marketing Campaigns, Website Development, Graphic Design, Market Research, Software Implementation, Consulting, and Corporate Booking Finder. We provide comprehensive solutions to support your organization’s branding, marketing, and operational needs, ensuring professional quality and strategic effectiveness in every project.</p>
+</a>
+</div>
 
   <br>
+  <br>
+
+  <h1>What Others Say About Us</h1>
 
   <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -366,14 +311,16 @@
 </div>
 
 <br>
+<br>
+<br>
+
 
  <div class="getin">
-    <h2>Get In Touch With Us</h2>
-    <h3>Have more time to grow your business. We'll take care of the rest.</h3>
-    <br>
-    <button><a href="firstblog.html"></a>Learn More</a></button>
-
-    </div>
+  <h2>Get In Touch With Us</h2>
+  <h3>Have more time to grow your business. We'll take care of the rest.</h3>
+  <br>
+  <a href="firstblog.html" class="button-link">Learn More</a>
+</div>
     
 <br>
 <br>
@@ -382,10 +329,10 @@
 <footer>
   <div class="footer-content">
     <a href="#default" class="footer-logo">
-      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px;">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px; filter: brightness(2);">
     </a>
     <div class="footer-links">
-      <a href="boamain.html">Home</a>
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="firstblog.html">Blogs</a>
