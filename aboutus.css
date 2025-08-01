@@ -22,7 +22,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  position: relative; left: 600px;
+  position: relative; left: 480px;
 }
 
 /* Glowing effect on hover */
