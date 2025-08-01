@@ -20,18 +20,21 @@
 
 <!-- Header with navigation -->
 <header class="header">
-  <a href="#default" class="logo">
+  <a href="index.html" class="logo">
     <img src="BOAcoolnew.png" alt="Logo" />
+    
   </a>
   <nav class="nav-container">
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="responsivservices.html">Services</a>
-      <a href="contact.html">Contact</a>
       <a href="aboutus.html">About</a>
+      <a href="responsivservices.html">Services</a>
       <a class="active" href="pricing.html">Pricing</a>
-      <a href="faqs.html">FAQs</a>
+      <a href="faqs.html">FAQ</a>
+      <a href="contact.html">Contact</a>
       <a href="firstblog.html">Blog</a>
+
+      
     </div>
     <br>
 
@@ -40,7 +43,7 @@
     <div class="dropdown" id="mobileDropdown">
       <button class="dropbtn" onclick="toggleDropdown()">&equiv;</button>
       <div class="dropdown-content" id="dropdownContent">
-        <a href="testboaresponsiv.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="aboutus.html">About</a>
         <a href="firstblog.html">Posts</a>
         <a href="contact.html">Contact</a>
@@ -56,12 +59,13 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
+  
+ 
 
  <style>
   .talk {
     position: relative;
+    bottom: 200px;
     background-image: url('agate.jpg');
     background-size: cover;
     background-position: center;
@@ -91,13 +95,23 @@
   /* Responsive typography */
   .talk h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: -100px;
   }
 
   .talk h2 {
     font-size: 1.8em;
     max-width: 800px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
+    position: relative;
+    bottom: -100px;
+  }
+
+  .talk p {
+    position: relative;
+    bottom: -150px;
+
   }
 
   /* Responsive adjustments for smaller screens */
@@ -166,7 +180,36 @@
   <!-- Placeholder for image -->
   <img src="enterprise.jpg" alt="Enterprise Tier Image" />
   <p><strong>Enterprise</strong>: The Enterprise tier is built for organisations ready to scale fast with a cohesive team of skilled virtual professionals. This solution offers streamlined onboarding, team structure design, and dedicated account management. Whether you're building out a department or expanding your global capability, Enterprise Angels are handpicked to align with your operational goals—delivering consistent quality, performance, and long-term value as an integrated extension of your business.</p>
+<p class="price">Hire Our Team of Angels</p>
 </section>
+
+<!-- BOA Projects Tier -->
+<section class="tier">
+  <h2>BOA Projects</h2>
+  <!-- Placeholder for image -->
+  <img src="prc2proj.jpg" alt="Projects Tier Image" />
+  <p><strong>BOA Projects- our tailored project-based service designed to meet your immediate, focused needs with precision and efficiency. Whether you require expert video editing, backlog clearing, data entry, research, or other specialized tasks, BOA Projects offers a seamless solution for small to medium-sized projects that demand quality and reliability.</p>
+<p class="price">Price on Application</p>
+</section>
+
+<!-- Contracting Tier -->
+<section class="tier">
+  <h2>Contracting</h2>
+  <!-- Placeholder for image -->
+  <img src="prc1contrct.jpg" alt="Contracting Tier Image" />
+  <p><strong>We are ready to take on professional long-term contracts using our top-tier business growth strategies and methods.</p>
+<p class="price">Price on Application</p>
+</section>
+
+<!-- Contracting Tier -->
+<section class="tier">
+  <h2>MBA Qualified Business Professional Consulting </h2>
+  <!-- Placeholder for image -->
+  <img src="prc3cons.jpg" alt="Consulting Tier Image" />
+  <p><strong>We are also capable of doing MBA-qualified business professional consulting designed to make organizations grow and flourish.</p>
+<p class="price">Price on Application</p>
+</section>
+
 <br>
 <br>
 
@@ -183,42 +226,23 @@
 </section>
 
 
-<div class="container">
-    <h2>Testimonials</h2>
-  </div>
-
-<!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Slides -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="Jairarvw.JPG" alt="Slide 1" />
-    
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="Noviervw.JPG" alt="Slide 2" />
-    
-  </div>
+<div class="video-text-container">
+  <!-- Video element -->
+  <video class="video-player" controls>
+    <source src="CT Core StoryCompressed (1).mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
   
-  <!-- Add more slides as needed -->
-
-  <!-- Navigation buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- Dots / Indicators -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <!-- Add more dots if you add more slides -->
+  <!-- Text box -->
+  <div class="text-box">
+    <h2>Here's What the Owner of Core Story Thinks of Us...</h2>
+    <br>
+    <p><h3>Aleyx emphasized how precise we are on meeting her business needs. Perhaps we can do the same for your business.</h3></p>
+  </div>
 </div>
 
-<br>
+
+
 
  <section class="find-angel-section">
     <div class="content-wrapper">
@@ -244,12 +268,12 @@
 <!-- Footer -->
 <footer>
   <div class="footer-content">
-    <a href="#default" class="footer-logo">
-      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px;">
+    <a href="index.html" class="footer-logo">
+      <img src="BOAcoolnew.png" alt="Logo" style="width:100px; height:80px; filter: brightness(2);">
     </a>
     <div class="footer-links">
-      <a href="boamain.html">Home</a>
-      <a href="services.html">Services</a>
+      <a href="index.html">Home</a>
+      <a href="responsivservices.html">Services</a>
       <a href="contact.html">Contact</a>
       <a href="firstblog.html">Blogs</a>
       <a href="faqs.html">FAQs</a>
