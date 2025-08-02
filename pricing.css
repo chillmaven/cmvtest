@@ -191,7 +191,7 @@ a:hover {
 .pricing-section .intro p {
   max-width: 800px;
   margin: 0 auto 20px;
-  font-size: 1.3em;
+  font-size: 1em;
   position: relative; bottom: -60px;
 }
 
@@ -650,3 +650,4 @@ html, body
 
 
 }
+
