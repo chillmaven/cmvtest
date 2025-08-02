@@ -240,6 +240,7 @@ a:hover {
 
   .pricing-section .intro p {
     font-size: 1em;
+    position: relative; bottom: -40px;
   }
 
   .tier {
@@ -650,4 +651,5 @@ html, body
 
 
 }
+
 
