@@ -65,15 +65,23 @@
  <style>
   .talk {
     position: relative;
-    bottom: 200px;
+    top: -100px;
+    bottom: 300px;
     background-image: url('agate.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; height: 125%;
+    background-position: center; 
     color: white;
-    padding: 60px 20px;
+    
+    
     text-align: center;
+    z-index: 0;
+    
   }
 
+  .talk::after {
+    height: 10px;
+    
+  }
   /* Optional overlay to enhance text readability */
   .talk::before {
     content: "";
@@ -95,29 +103,32 @@
   /* Responsive typography */
   .talk h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    
     position: relative;
-    bottom: -100px;
+    bottom: -200px;
   }
 
   .talk h2 {
-    font-size: 1.8em;
+    font-size: 2em;
     max-width: 800px;
     margin: 0 auto 10px;
     position: relative;
-    bottom: -100px;
+    bottom: -280px;
+    
   }
 
   .talk p {
     position: relative;
-    bottom: -150px;
-
+    font-size: larger;
+    bottom: -400px;
+    
   }
 
   /* Responsive adjustments for smaller screens */
   @media (max-width: 768px) {
     .talk {
       padding: 40px 20px;
+      
     }
     .talk h1 {
       font-size: 2em;
@@ -125,7 +136,11 @@
     .talk h2 {
       font-size: 1.5em;
     }
-  }
+    .talk p {
+      display: none;
+    }
+
+}
 
   /* Container styling */
   .header-with-button {
@@ -145,23 +160,19 @@
     font-size: 1em;
   }
 
+  /* Style for the button */
   .glow-button {
-  display: flex; /* Enables flexbox for content alignment */
-  align-items: center; /* Vertically centers the text */
-  justify-content: center; /* Horizontally centers the text */
-  flex: 1 1 25%;
-  padding: 12px 24px;
-  font-size: 1em;
-  color: #fff;
-  background: linear-gradient(45deg, #0d17a5, #151c7e);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(24, 198, 221, 0.7);
-  transition: all 0.3s ease;
-  text-decoration: none; /* Remove underline if it's an <a> */
-  text-align: center; /* Ensures text is centered */
-}
+    flex: 1 1 25%;
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(45deg, #0d17a5, #151c7e);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(24, 198, 221, 0.7);
+    transition: all 0.3s ease;
+  }
 
   /* Hover effect for the button */
   .glow-button:hover {
@@ -178,7 +189,7 @@
 
     .header-with-button h2 {
       flex: 1 1 100%;
-      font-size: 1em;
+      font-size: 1.5em;
       margin-bottom: 10px;
     }
 
@@ -198,6 +209,8 @@
     <p>Our prices reflect a tiered system, allowing you to be in control of what you need for your business.</p>
   </div>
 </section>
+
+
 
 
 
@@ -309,7 +322,7 @@
 
 <div class="header-with-button">
   <h2>Are you ready to get some time back in your day? Let us find you an Angel!</h2>
-  <a href="contact.html" class="glow-button">Find My Angel</a>
+  <button class="glow-button">Find My Angel</button>
 </div>
 
 
@@ -429,9 +442,5 @@ window.onclick = function(event) {
 
 </script>
 </html>
-
-
-
-
 
 
