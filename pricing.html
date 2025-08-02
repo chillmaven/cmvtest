@@ -145,19 +145,23 @@
     font-size: 1em;
   }
 
-  /* Style for the button */
   .glow-button {
-    flex: 1 1 25%;
-    padding: 12px 24px;
-    font-size: 1em;
-    color: #fff;
-    background: linear-gradient(45deg, #0d17a5, #151c7e);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(24, 198, 221, 0.7);
-    transition: all 0.3s ease;
-  }
+  display: flex; /* Enables flexbox for content alignment */
+  align-items: center; /* Vertically centers the text */
+  justify-content: center; /* Horizontally centers the text */
+  flex: 1 1 25%;
+  padding: 12px 24px;
+  font-size: 1em;
+  color: #fff;
+  background: linear-gradient(45deg, #0d17a5, #151c7e);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(24, 198, 221, 0.7);
+  transition: all 0.3s ease;
+  text-decoration: none; /* Remove underline if it's an <a> */
+  text-align: center; /* Ensures text is centered */
+}
 
   /* Hover effect for the button */
   .glow-button:hover {
@@ -425,6 +429,7 @@ window.onclick = function(event) {
 
 </script>
 </html>
+
 
 
 
