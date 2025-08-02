@@ -106,6 +106,7 @@ body {
   /* Show dropdown button */
   .dropdown {
     display: block;
+    position: relative; top: -21px; right: 250px;
   }
 }
 
@@ -136,6 +137,30 @@ a:hover {
   font-weight: bold;
   background-color: #ddd;
 }
+
+
+/* Container styling if needed */
+  .responsive-image-container {
+    max-width: 70%;
+    margin: 0 auto;
+    overflow: hidden; /* ensures hover effects don't spill outside */
+  }
+
+  /* Make image fully responsive */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* smooth hover effect */
+  }
+
+  /* Hover effect: slight zoom in and reduce opacity for effect */
+  .responsive-image:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+
+
 
 
 
