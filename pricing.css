@@ -183,7 +183,7 @@ a:hover {
 .pricing-section h1 {
   font-size: 2.5em;
   margin-bottom: 30px;
-  position: relative; bottom: -50px;
+  position: relative; bottom: -40px;
   
 }
 
@@ -192,7 +192,7 @@ a:hover {
   max-width: 800px;
   margin: 0 auto 20px;
   font-size: 1em;
-  position: relative; bottom: -60px;
+  position: relative; bottom: -50px;
 }
 
 /* Common styles for all tier sections */
@@ -651,6 +651,7 @@ html, body
 
 
 }
+
 
 
 
