@@ -1,6 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
+  
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -20,6 +20,7 @@
   padding: 10px 20px;
   background-color: #4d4f55;
   position: relative;
+  z-index: 1;
 }
 
 .header .logo {
@@ -101,6 +102,7 @@
   /* Show dropdown button */
   .dropdown {
     display: block;
+    position: relative; top: -24px; right: 250px;
   }
 }
 
@@ -133,9 +135,9 @@ a:hover {
 }
 
 .talk {
-  width: 100%; height: 500px;
+  width: 100%; 
     
-    background-size: 60%;
+    
     background-position: right;
     background-repeat: no-repeat;
     position: relative;
@@ -148,7 +150,7 @@ a:hover {
 
 
 .talk > h1 {
-    position: absolute; left: 200px; top: 250px; width: 100%; height: 500px;
+    position: relative; left: 200px; top: 140px; width: 100%; height: 500px;
     font-size: 3rem;
 
 
@@ -162,15 +164,16 @@ a:hover {
 }
 
 .paratalk {
-    position: absolute; top: 400px;
+    position: relative; top: 400px;
 
 }
 
 /* Style for the entire pricing section container */
 .pricing-section {
   background-color: #0c0f31; /* dark blue background */
-  padding: 10px;
-  padding-top: 0px;
+  padding: 10px; height: 60%;
+  
+  padding-bottom: 60px;
   color: #fff; /* text color for readability */
   text-align: center;
   position: relative; top: -100px;
@@ -179,14 +182,17 @@ a:hover {
 /* Style for the main heading */
 .pricing-section h1 {
   font-size: 2.5em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  position: relative; bottom: -50px;
+  
 }
 
 /* Style for the introduction paragraph */
 .pricing-section .intro p {
   max-width: 800px;
   margin: 0 auto 20px;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  position: relative; bottom: -60px;
 }
 
 /* Common styles for all tier sections */
