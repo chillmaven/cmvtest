@@ -171,7 +171,7 @@ a:hover {
 /* Style for the entire pricing section container */
 .pricing-section {
   background-color: #0c0f31; /* dark blue background */
-  padding: 10px; height: 60%;
+  padding: 10px; height: 80%;
   
   padding-bottom: 60px;
   color: #fff; /* text color for readability */
@@ -651,6 +651,7 @@ html, body
 
 
 }
+
 
 
 
