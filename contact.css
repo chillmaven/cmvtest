@@ -11,6 +11,24 @@
 }
 
 
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: url('contact1.jpg'); /* replace with your image path */
+  background-size: cover; /* ensures the image covers the entire viewport */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  background-attachment: fixed; /* optional: creates a parallax effect on some devices */
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* disables fixed background on small screens for better performance */
+  }
+}
+
+
 /* Header styles */
 .header {
   display: flex;
@@ -171,6 +189,25 @@ input[type=submit]:hover {
 
 }
 
+.container {
+  padding: 40px 20px;
+  background-color: #f5f5f5; /* fallback background color */
+  background-image: url(''); /* replace with your image path */
+  background-size: cover; /* ensures the image covers the entire section */
+  background-position: center; /* centers the background image */
+  background-repeat: no-repeat; /* prevents tiling */
+  
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+    /* Optional: add a semi-transparent overlay for better readability */
+    /* Or adjust background properties if needed */
+  }
+}
+
  /* Container styles for responsiveness */
   .responsive-section {
     padding: 20px;
@@ -188,6 +225,13 @@ input[type=submit]:hover {
   #ready h2 {
     font-size: 1.2em;
     margin-top: 0;
+  }
+
+  #ready {
+    border: 3px solid #333;  
+  padding: 10px;           /* padding for spacing */
+  background-color: #f0f0f0; /* optional: background color */
+
   }
 
   /* Optional: ensure text wraps nicely on small screens */
@@ -230,18 +274,33 @@ footer a:hover {
 .newreach {
   display: flex;
   flex-direction: column;
-  align-items: center; /* horizontal centering */
-  justify-content: center; /* vertical centering */
-  
+  align-items: center; /* center items horizontally */
+  justify-content: center; /* center items vertically if needed */
+
   text-align: center; /* center the text inside */
+  font-size: 1em; /* font size */
+  font-weight: bold;
+  
+
+  margin: 0 auto; /* center the container horizontally */
+  
+  width: 90%; /* make container width responsive (90% of parent) */
+  max-width: 600px; /* optional: limit max width for large screens */
+
+  padding-left: 10px; /* optional: add side padding for small screens */
+  padding-right: 10px;
+
+  border: 3px solid #333; /* example border, adjust as needed */
+  margin-bottom: 20px; /* space below */
+  background-color: #f2f2f2;
 }
 
-.newreach h2 {
-  font-size: 2em;          /* larger font size */
-  font-weight: bold;       /* bold text */
-  text-align: center;      /* center the heading text */
-  margin-bottom: 20px;     /* space below h2 */
-  border: 3px solid #333;  /* optional: border around h2 */
-  padding: 10px;           /* padding inside the h2 for spacing */
-  background-color: #f0f0f0; /* optional: background color */
+/* Optional: Adjust padding on smaller screens */
+@media (max-width: 768px) {
+  .newreach {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
+
+
